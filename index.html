@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ropa Indie Chic - Marketplace</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="https://placehold.co/48x48/FF69B4/FFFFFF?text=👗" alt="Logo" id="logo">
+    <h1>Trading indie marketplace</h1>
+  </header>
+  <main>
+    <section id="products-grid">
+      <!-- Las tarjetas de productos se renderizan aquí dinámicamente -->
+    </section>
+    <button id="open-management-btn" title="Gestionar productos">+</button>
+    <section id="management-section" class="hidden">
+      <h2>Gestión de Productos<button id="close-management-btn" title="Cerrar formulario">×</button></h2>
+      <form id="product-form">
+        <label for="product-name">Nombre:</label>
+        <input type="text" id="product-name" required>
+        <label for="product-description">Descripción:</label>
+        <textarea id="product-description" required></textarea>
+        <label for="product-price">Precio:</label>
+        <input type="number" id="product-price" step="0.01" min="0" required>
+        <label for="product-image-url">URL de Imagen:</label>
+        <input type="text" id="product-image-url" placeholder="Pega una URL de imagen">
+        <label for="product-image-file">O sube una imagen:</label>
+        <input type="file" id="product-image-file" accept="image/*" multiple>
+        <div id="multi-product-form-container"></div>
+        <span id="image-upload-loading" class="hidden">Subiendo imagen...</span>
+        <button type="submit" id="save-product-button">Guardar Prenda</button>
+      </form>
+      <h3>Prendas Actuales</h3>
+      <table id="management-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Filas de productos renderizadas dinámicamente -->
+        </tbody>
+      </table>
+    </section>
+    <div id="custom-alert-modal" class="modal hidden">
+      <div class="modal-content">
+        <p id="alert-message"></p>
+        <button id="alert-ok-btn">Aceptar</button>
+      </div>
+    </div>
+    <div id="custom-confirm-modal" class="modal hidden">
+      <div class="modal-content">
+        <p id="confirm-message"></p>
+        <button id="confirm-yes-btn">Sí</button>
+        <button id="confirm-no-btn">No</button>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p>&copy; 2024 Trading indie marketplace. </p>
+  </footer>
+    <script>
+    // IMPORTANTE: Reemplaza esto con tu configuración real de Firebase
+    const firebaseConfig = {
+      apiKey: "AIzaSyDcgdYaerMLGRRXtx4u6GjpJR0T1FbkyjA",
+      authDomain: "test-firebase-a3703.firebaseapp.com",
+      projectId: "test-firebase-a3703",
+      storageBucket: "test-firebase-a3703.appspot.com",
+      messagingSenderId: "467112888069",
+      appId: "1:467112888069:web:1dcf147bfb91c8dba7596c",
+      measurementId: "G-0Y29S95MRY"
+    };
+    // Esto hace que la configuración esté disponible para firebase-config.js
+    window.__firebase_config = JSON.stringify(firebaseConfig);
+  </script>
+  <script type="module" src="script.js"></script>
+</body>
+</html> 
