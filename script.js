@@ -339,7 +339,7 @@ function handleSelectProduct(id) {
 // --- Event Listeners Iniciales ---
 document.addEventListener('DOMContentLoaded', () => {
   // Comprobar si la API key de ImgBB está configurada
-  if (IMGBB_API_KEY === 'YOUR_IMGBB_API_KEY' || !IMGBB_API_KEY) {
+  if (IMGBB_API_KEY === 'ce99b1421b97fd3dfee0f4359cafa5f6' || !IMGBB_API_KEY) {
     console.warn('La API Key de ImgBB no está configurada. La subida de imágenes está deshabilitada.');
     productImageFileInput.disabled = true;
     const label = document.querySelector('label[for="product-image-file"]');
